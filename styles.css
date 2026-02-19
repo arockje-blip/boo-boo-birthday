@@ -1,0 +1,96 @@
+:root {
+  --bg-1: #ffd1a8;
+  --bg-2: #ffe9c7;
+  --bg-3: #fff6e8;
+  --ink: #1f1b16;
+  --accent: #ff6b4a;
+  --accent-2: #ff8f5a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: "Poppins", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 20%, var(--bg-1), transparent 45%),
+    radial-gradient(circle at 80% 10%, var(--bg-2), transparent 40%),
+    linear-gradient(160deg, var(--bg-3), #fff);
+  display: grid;
+  place-items: center;
+}
+
+.stage {
+  padding: 32px;
+  width: min(640px, 92vw);
+}
+
+.card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(90, 50, 20, 0.18);
+  border: 1px solid rgba(255, 108, 74, 0.25);
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  margin: 0 0 10px;
+  color: rgba(31, 27, 22, 0.6);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: rgba(31, 27, 22, 0.7);
+}
+
+.speak {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-size: 1rem;
+  padding: 14px 28px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 14px 26px rgba(255, 107, 74, 0.35);
+}
+
+.speak:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(255, 107, 74, 0.4);
+}
+
+.speak:active {
+  transform: translateY(0);
+}
+
+.status {
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+  color: rgba(31, 27, 22, 0.6);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 22px;
+  }
+
+  .speak {
+    font-size: 1.05rem;
+    padding: 16px 30px;
+  }
+}
